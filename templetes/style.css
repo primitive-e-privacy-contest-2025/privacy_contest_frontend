@@ -1,0 +1,31 @@
+.btn-custom {
+    background-color: #6c757d !important; /* secondary 색상 (기본 배경) */
+    border-color: #6c757d !important;     /* secondary 테두리 색상 */
+    color: white !important;              /* 텍스트 색상 */
+}
+
+.btn-custom:hover {
+    background-color: #007bff !important; /* primary 색상 (마우스 올렸을 때 배경) */
+    border-color: #0069d9 !important;     /* primary 테두리 색상 */
+}
+
+ .line-with-text {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     margin-top: 20px;
+ }
+
+.line {
+    height: 1px;  /* 수평선의 두께 */
+    background-color: #000;  /* 수평선 색상 */
+    width: 200px;  /* 수평선의 길이 */
+    filter: blur(1px);
+    opacity: 0.8;  /* 흐림을 더욱 강조 */
+}
+
+.text {
+    padding: 0 10px;
+}
+
