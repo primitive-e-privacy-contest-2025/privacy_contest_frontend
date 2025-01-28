@@ -17,6 +17,14 @@
      margin-top: 20px;
  }
 
+ .onlyLine{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     margin-top: 20px;
+ }
+
 .line {
     height: 1px;  /* 수평선의 두께 */
     background-color: #000;  /* 수평선 색상 */
@@ -25,7 +33,33 @@
     opacity: 0.8;  /* 흐림을 더욱 강조 */
 }
 
+.Line {
+    height: 1px;  /* 수평선의 두께 */
+    background-color: #000;  /* 수평선 색상 */
+    width: 480px;  /* 수평선의 길이 */
+    filter: blur(1px);
+    opacity: 0.8;  /* 흐림을 더욱 강조 */
+    margin-top: 10px;
+}
+
 .text {
     padding: 0 10px;
 }
+
+.btn-custom-gender {
+    background-color: #6c757d !important; /* 기본 배경색 */
+    border-color: #6c757d !important;     /* 기본 테두리색 */
+    color: white !important;              /* 텍스트 색상 */
+    padding: 12px 24px !important;        /* 버튼 크기 (위아래, 좌우 패딩 증가) */
+    font-size: 18px !important;           /* 폰트 크기 키우기 */
+    border-radius: 8px !important; /* 버튼 모서리 둥글게 */
+    width: 150px !important;              /* 버튼 너비 증가 */
+    text-align: center !important;        /* 텍스트 가운데 정렬 */
+}
+
+.btn-custom-gender:hover {
+    background-color: #007bff !important; /* 마우스 올렸을 때 배경색 */
+    border-color: #0069d9 !important;     /* 마우스 올렸을 때 테두리색 */
+}
+
 
