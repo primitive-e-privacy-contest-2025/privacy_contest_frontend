@@ -1,0 +1,33 @@
+<head>
+    <link href="busin_login.css" rel="stylesheet">
+</head>
+<body id="particles-js"></body>
+
+<div class="animated bounceInDown">
+    <div class="header">
+    <img src="logo_no-circle.png" id="logo">
+    <a href="menu.html"><img src="menu.png" alt="Menu_icon" id="menu_icon"></a>
+    <a href="user_login.html" class="sign-join" id="LOGIN">LOGIN</a>
+    <a href="JOIN" class="sign-join" id="JOIN">JOIN</a>
+    </div>
+
+  <div class="container">
+    <span class="error animated tada" id="msg"></span>
+    <form name="form1" class="box" onsubmit="return checkStuff()">
+    <a href="user_login.html" class="btn2 indiv-mem">개인 회원 로그인</a>
+    <a href="busin_login.html" class="btn2 busin-mem">기업 회원 로그인</a>
+
+      <h4>기업 회원 로그인</h4>
+        <input type="text" maxlength="10" id="brnum" placeholder="사업자 등록번호(10자리)" autocomplete="off">
+        <input type="button" id="brnum_bt" class="num_bt" value="조회" onclick="corp_chk();">
+        <!--비밀번호 눈 아이콘  <i class="typcn typcn-eye" id="eye"></i>-->
+        <input type="text" maxlength="6" id="OTPnum" placeholder="OPT 번호 입력(6자리)" autocomplete="off">
+        <input type="button" id="OTPnum_bt" class="num_bt" value="확인" onclick="corp_chk();">
+        <label>
+          <input type="checkbox">
+          <span></span>
+          <small class="rmb">Remember me</small>
+        </label>
+        <input type="submit" value="Sign in" class="btn1" id="signIn">
+    </form>
+    <a href="#" class="dnthave">Don’t have an account? Sign up</a>
