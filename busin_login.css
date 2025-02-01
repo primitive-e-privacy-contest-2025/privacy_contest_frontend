@@ -19,13 +19,13 @@ body, html {
 }
 
 #logo{
-    width: 60;
+    width: 60px;
     height: auto;
     margin-left: 10px;
 }
 #menu_icon{
     position: absolute;
-    width: 27;
+    width: 27px;
     height: auto;
     top: 13px;
     right: 2%;
