@@ -6,13 +6,13 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* 📌 컨테이너 전체 */
+/* 컨테이너 전체 */
 .container {
     display: flex;
     height: 100vh;
 }
 
-/* 📌 왼쪽 사이드바 */
+/* 왼쪽 사이드바 */
 .sidebar {
     width: 250px;
     background-color: #444;
@@ -66,7 +66,7 @@
     background-color: #666;
 }
 
-/* 📌 메인 컨텐츠 */
+/* 메인 컨텐츠 */
 .content {
     flex: 1;
     padding: 40px;
@@ -141,7 +141,7 @@ h1 {
     margin-top: 5px;
 }
 
-/* 📌 반응형 디자인 */
+/* 반응형 디자인 */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;

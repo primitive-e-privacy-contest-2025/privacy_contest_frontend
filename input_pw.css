@@ -6,13 +6,13 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* 컨테이너 전체 */
+/* 📌 컨테이너 전체 */
 .container {
     display: flex;
     height: 100vh;
 }
 
-/* 메인 컨텐츠 */
+/* 📌 메인 컨텐츠 */
 .content {
     flex: 1;
     padding: 40px;
@@ -58,36 +58,54 @@ h1 {
 }
 
 .setting-item p {
-    font-size: 14px;
+    font-size: 16px;
     color: #333333;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* 반응형 디자인 */
+/* 📌 반응형 디자인 */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
+    .menu li a {
+        text-align: left;
+        padding: 10px 15px;
+    }
+}
+
+.btn-container {
+    margin-top: 10px;
+}
+
+#pwd {
+    display: block;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #b4b2b2;
+    width: 500px;
+    padding: 10px;
+    outline: none;
+    color: #2d2d2d;
+    transition: all 0.2s ease-out;
 }
 
 .btn {
+    font-size: 14px;
+    font-weight: bold;
     display: inline-block;
     padding: 10px 20px;
-    background-color: white;
-    margin-right: 7px;
-    font-size: 14px;
-    color: #333333;
-    border: solid 1px #ddd;
+    background-color: #bfbfbf;
+    color: #444444;
+    border: none;
     border-radius: 5px;
-    width: 250px;
+    width: 500px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
 }
-.btn-container {
-    margin-top: 10px;
-}
+
 .btn:hover {
-    background-color: #b4b2b2;
+    background-color: #666;
 }
