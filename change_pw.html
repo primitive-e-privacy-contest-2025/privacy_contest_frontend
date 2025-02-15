@@ -13,9 +13,15 @@
         <div class="settings">
             <div class="setting-item">
                 <p>개인정보 보호를 위해 비밀번호를 변경해주세요.</p>
-                <input type="password" name="password" placeholder="기존 비밀번호" id="pwd" autocomplete="off">
-                <input type="password" name="password" placeholder="새 비밀번호" id="pwd" autocomplete="off">
-                <input type="password" name="password" placeholder="새 비밀번호 확인" id="pwd" autocomplete="off">
+                <label for="current-pwd">기존 비밀번호</label>
+                <input type="password" name="password" placeholder="기존 비밀번호" id="current-pwd" class="pwd" autocomplete="off">
+
+                <label for="new-pwd">새 비밀번호</label>
+                <input type="password" name="password" placeholder="새 비밀번호" id="new-pwd" class="pwd" autocomplete="off">
+
+                <label for="confirm-pwd">새 비밀번호 확인</label>
+                <input type="password" name="password" placeholder="새 비밀번호 확인" id="confirm-pwd" class="pwd" autocomplete="off">
+
                 <a>ㆍ3개월 이상 비밀번호를 변경하지 않고 동일한 비밀번호를 사용 중인 경우, 로그인 시 비밀번호 변경 안내를 해드리고 있습니다.<br>
                 <br>ㆍ비밀번호 변경 시 자동 로그인은 해제됩니다. 변경된 비밀번호로 다시 로그인 하세요.</a>
                 <div class="btn-container">

@@ -89,7 +89,7 @@ h1 {
     margin-top: 10px;
 }
 
-#pwd {
+.pwd {
     display: block;
     background: #ffffff;
     border-radius: 5px;
