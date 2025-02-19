@@ -30,20 +30,20 @@
             <p style="margin-left: 50px">사업자 등록증 <span style="color: blue;">*</span></p>
             <div id="drop-area">
                 <p>이미지를 드래그 앤 드롭 하거나 클릭하여 업로드하세요.</p>
-                <input type="file" id="file-input" accept="image/*" style="display: none;">
+                <input type="file" id="file-input" name="businessRegistration" accept="image/*" style="display: none;">
             </div>
             <img id="image-preview" src="" alt="업로드된 이미지">
 
             <br><br>
             <p>사업자 등록 번호 <span style="color: blue;">*</span></p>
             <div class="inner">
-                <input style="width: 370px" type="text" name="email" id="search" autocomplete="off">
+                <input style="width: 370px" type="text" name="businessRegistrationNumber" id="business-reg-number" autocomplete="off">
                 <a href="#" class="btn5 search" id="busin-search">조회</a>
             </div>
 
             <br><br>
             <p style="margin-left: 50px">법인명 또는 상호 <span style="color: blue;">*</span></p>
-            <input style="width: 450px" type="text" name="id" autocomplete="off">
+            <input style="width: 450px" type="text" id="business-name" name="id" autocomplete="off">
 
             <br><br>
             <p style="margin-left: 50px">휴대폰 <span style="color: blue;">*</span></p>
@@ -73,7 +73,7 @@
 
             <br><br><br>
             <p style="margin-left: 50px">이름 <span style="color: blue;">*</span></p>
-            <input style="width: 450px" type="text" name="name" autocomplete="off">
+            <input style="width: 450px" type="text" name="name" id="name" autocomplete="off">
 
         </form>
     </div>
