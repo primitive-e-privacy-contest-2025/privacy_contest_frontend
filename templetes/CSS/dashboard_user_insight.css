@@ -15,8 +15,9 @@
 /* 사이드바 */
 .sidebar {
     width: 250px;
-    background-color: #ddd;
+    background-color: #444;
     padding: 20px;
+    text-align: center;
 }
 
 .sidebar h2 {
@@ -34,14 +35,14 @@
 
 .sidebar ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 10px;
     display: block;
 }
 
 .sidebar ul li a.active {
     width: 100%;
-    background-color: #b4b2b2;
+    background-color: #656565;
     border-radius: 3px;
 }
 
@@ -98,10 +99,10 @@ header {
     padding-right: 10px;
 }
 
-.red { background: red; width: 70%; }
-.blue { background: blue; width: 45%; }
-.yellow { background: yellow; color: black; width: 80%; }
-.green { background: green; width: 85%; }
+.red { background: #fdabab; color: black; width: 70%; }
+.blue { background: #9696ff; color: black; width: 45%; }
+.yellow { background: #ffff8c; color: black; width: 80%; }
+.green { background: #b8fbb8; color: black; width: 85%; }
 
 /* 테이블 */
 .data-table {

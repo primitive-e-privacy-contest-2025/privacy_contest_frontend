@@ -61,26 +61,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* 바 (로고, 메뉴) */
-.bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-
-.logo {
-    width: 40px;
-    height: auto;
-    margin: 20px auto;
-}
-
-.menu {
-    width: 40px;
-    height: auto;
-    margin: 20px auto;
-}
-
 /* 📌 반응형 디자인 */
 @media (max-width: 768px) {
     .container {
@@ -138,4 +118,20 @@ h1 {
 .service-box span {
     font-size: 18px;
     font-weight: 600;
+}
+#back {
+    text-decoration: none;
+    color: black; /* 링크 색상 변경 */
+}
+
+#back:hover {
+    color: black;
+}
+
+#back:visited {
+    color: black;
+}
+
+#back:active {
+    color: black;
 }
