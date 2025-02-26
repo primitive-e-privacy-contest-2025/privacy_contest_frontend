@@ -59,7 +59,7 @@ body, html {
     text-align: center;
     transform: translateX(-50%);
     width: 570px;
-    height: 1100px;
+    height: 1200px;
 }
 
 .box h4 {
@@ -280,6 +280,33 @@ a:hover {
 }
 
 .gender{
+    background-color: #ffffff;
+    color: #0c0c0c;
+}
+
+.sign-button{
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    position: relative;
+    border: 0.5px solid #b4b2b2;
+    border-radius: 7px;
+    width: 140px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sign-button:hover {
+    background-color: #5c7fda;
+    border: 0.5px solid #4a6eb1;
+}
+
+.signup{
     background-color: #ffffff;
     color: #0c0c0c;
 }

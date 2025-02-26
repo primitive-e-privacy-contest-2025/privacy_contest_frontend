@@ -37,19 +37,19 @@
             <br><br>
             <p>사업자 등록 번호 <span style="color: blue;">*</span></p>
             <div class="inner">
-                <input style="width: 370px" type="text" name="businessRegistrationNumber" id="business-reg-number" autocomplete="off">
-                <a href="#" class="btn5 search" id="busin-search">조회</a>
+                <input style="width: 370px" type="text" name="businessRegistrationNumber" id="business_reg_number" autocomplete="off">
+                <a href="#" class="btn5 search" id="busin_search">조회</a>
             </div>
 
             <br><br>
             <p style="margin-left: 50px">법인명 또는 상호 <span style="color: blue;">*</span></p>
-            <input style="width: 450px" type="text" id="business-name" name="id" autocomplete="off">
+            <input style="width: 450px" type="text" id="business_name" name="id" autocomplete="off">
 
             <br><br>
             <p style="margin-left: 50px">휴대폰 <span style="color: blue;">*</span></p>
             <div class="inner">
-                <input type="text" name="number" id="phone-number" placeholder="연락처를 입력해주세요" autocomplete="off">
-                <a href="#" class="btn3 num-mem" id="request-auth">인증요청</a>
+                <input type="text" name="number" id="phone_number" placeholder="연락처를 입력해주세요" autocomplete="off">
+                <a href="#" class="btn3 num-mem" id="request_auth">인증요청</a>
             </div>
             <small class="rmb">하이픈(-)을 제외한 번호를 입력하세요.</small>
             <hr style="margin-top: 70px">
@@ -65,7 +65,7 @@
 
             <br><br><br>
             <p style="margin-left: 50px">비밀번호 <span style="color: blue;">*</span></p>
-            <input type="password" name="password" id="pwd" autocomplete="off">
+            <input type="password" name="password" id="password" autocomplete="off">
             <button type="button" id="togglePassword">
                 <i class="fas fa-eye"></i>
             </button>
@@ -75,10 +75,15 @@
             <p style="margin-left: 50px">이름 <span style="color: blue;">*</span></p>
             <input style="width: 450px" type="text" name="name" id="name" autocomplete="off">
 
+            <div class="sign-button">
+                <a class="signup" id="signup" onclick="handleSignin()">회원가입</a>
+            </div>
+
         </form>
     </div>
 </div>
 <script src="../JS/password.js"></script>
 <script src="../JS/drop-area.js"></script>
+<script src="../JS/busin_api.js"></script>
 </body>
 </html>

@@ -46,7 +46,7 @@
 
       <br><br>
       <p style="margin-left: 50px">비밀번호 <span style="color: blue;">*</span></p>
-      <input type="password" name="password" id="pwd" autocomplete="off">
+      <input type="password" name="password" id="password" autocomplete="off">
       <button type="button" id="togglePassword">
         <i class="fas fa-eye"></i>
       </button>
@@ -62,20 +62,26 @@
       <small class="rmb" style="margin-left: -235px">알림 및 로그인 시 사용되는 이메일이니 정확하게 입력해 주세요. </small>
       <br><br><br>
       <p style="margin-left: 50px">이름 <span style="color: blue;">*</span></p>
-      <input style="width: 450px" type="text" name="name" autocomplete="off">
+      <input style="width: 450px" type="text" id="name" name="name" autocomplete="off">
       <br><br>
       <p style="margin-left: 50px">생년월일 <span style="color: blue;">*</span></p>
-      <input style="width: 450px" type="text" name="name" placeholder="YYYY.MM.DD" autocomplete="off">
+      <input style="width: 450px" type="text" id="birth" name="name" placeholder="YYYY.MM.DD" autocomplete="off">
       <br><br>
       <p style="margin-left: 50px">성별</p>
       <div class="gender-buttons">
-      <a href="#" class="btn4 gender" id="female">여성</a>
-      <a href="#" class="btn4 gender" id="male">남성</a>
-      <a href="#" class="btn4 gender" id="secret">미공개</a>
+      <a class="btn4 gender" id="female" onclick="handleSignin()">여성</a>
+      <a class="btn4 gender" id="male" onclick="handleSignin()">남성</a>
+      <a class="btn4 gender" id="secret" onclick="handleSignin()">미공개</a>
       </div>
+
+      <div class="sign-button">
+        <a class="signup" id="signup" onclick="handleSignin()">회원가입</a>
+      </div>
+
     </form>
   </div>
 </div>
 <script src="../JS/password.js"></script>
+<script src="../JS/user_api.js"></script>
 </body>
 </html>
