@@ -25,24 +25,26 @@
             </div>
         </div>
         <br><br>
+
         <div class="api">
-            <h3>이름</h3>
-            <h3>API 키</h3>
-            <h3>마지막 사용일</h3>
-            <h3>사용자</h3>
-            <h3>허가</h3>
+            <div class="api_header">
+                <h3 id="user_name">이름</h3>
+                <h3 id="api_key">API 키</h3>
+                <h3 id="last">마지막 사용일</h3>
+                <h3 id="user_names">사용자</h3>
+                <h3 id="permissions">허가</h3>
+            </div>
         </div>
-        <hr style="opacity: 0.5;">
     </main>
 </div>
+</div>
 
-<!-- Modal -->
 <div id="serviceModal" class="modal">
-    <div class="modal-content">
+    <div class="modal_content">
         <span class="close" onclick="closeModal()">&times;</span>
         <h2>서비스 등록</h2>
-        <label for="service_name">서비스 이름:</label>
-        <input type="text" id="service_name" placeholder="서비스 이름"><br><br>
+        <label for="name">서비스 이름:</label>
+        <input type="text" id="name" placeholder="서비스 이름"><br><br>
 
         <label for="last_used">마지막 사용일:</label>
         <input type="date" id="last_used"><br><br>
@@ -57,6 +59,6 @@
     </div>
 </div>
 
-<script src="api.js" defer></script>
+<script src="../JS/api.js"></script>
 </body>
 </html>

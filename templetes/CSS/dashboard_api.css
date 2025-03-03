@@ -136,20 +136,50 @@ h1 {
     color: black;
 }
 
-/* Modal 기본 스타일 */
+.api_header{
+    display: flex;
+}
+
+.api_header h3 {
+    display: flex;
+    margin: 0;
+}
+
+#user_name {
+    margin-right: 180px;
+}
+
+#api_key {
+    margin-right: 150px;
+}
+
+#last {
+    margin-right: 100px;
+}
+
+#user_names{
+    margin-right: 160px;
+}
+
+#permissions {
+    margin-right: 5px;
+}
+
+
+
 .modal {
-    display: none; /* 기본적으로 모달은 숨김 */
+    display: none;
     position: fixed;
-    z-index: 1; /* 모달이 다른 콘텐츠 위에 오도록 */
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* 배경 흐림 */
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
 
-/* 모달 콘텐츠 스타일 */
-.modal-content {
+.modal_content {
     background-color: white;
     margin: 15% auto;
     padding: 20px;
@@ -158,7 +188,6 @@ h1 {
     max-width: 500px;
 }
 
-/* 닫기 버튼 스타일 */
 .close {
     color: #aaa;
     float: right;
@@ -172,3 +201,41 @@ h1 {
     text-decoration: none;
     cursor: pointer;
 }
+
+.modal_content button {
+    background-color: #93ccff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal_content button:hover {
+    background-color: #93ccff;
+    transform: scale(1.05);
+}
+
+.modal_content button:active {
+    background-color: #93ccff;
+    transform: scale(0.98);
+}
+
+.api_item {
+    display: flex;  /* flex 레이아웃을 사용하여 가로로 정렬 */
+    flex-direction: row; /* 기본값이 row지만, 명시적으로 설정해줍니다. */
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.api_item div {
+    width: 25%; /* 각 항목이 동일한 너비를 가지도록 설정 */
+}
+
+
+

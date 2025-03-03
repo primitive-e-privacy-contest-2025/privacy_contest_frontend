@@ -74,54 +74,35 @@ function generateRandomString(length) {
     return result;
 }
 
-// 서비스 등록
 function registerService() {
-    const serviceName = document.getElementById("service_name").value;
-    const lastUsed = document.getElementById("last_used").value;
-    const user = document.getElementById("user").value;
-    const apiKey = document.getElementById("generated_api_key").textContent;
+    // 입력된 값 가져오기
+    const serviceName = document.getElementById('name').value;
+    const lastUsed = document.getElementById('last_used').value;
+    const user = document.getElementById('user').value;
+    const apiKey = document.getElementById('generated_api_key').textContent; // 생성된 API 키
 
-    const newService = {
-        service_name: serviceName,
-        api_key: apiKey,
-        last_used: lastUsed,
-        user: user,
-        permissions: "읽기/쓰기" // 예시로 기본 허가를 설정
-    };
+    // .api div 안에 있는 api_header 바로 아래에 새로운 항목 추가
+    const apiContainer = document.querySelector('.api');
 
-    // 실제 서버에 서비스 등록 (예시로 fetch 사용)
-    fetch(`${backend_url}/register_service`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${localStorage.getItem("access")}`
-        },
-        body: JSON.stringify(newService)
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert("서비스가 등록되었습니다.");
-                closeModal(); // 모달 닫기
-                // 화면에 새로운 서비스 추가 (예시로 HTML 코드로 추가)
-                const apiList = document.querySelector(".api");
-                const newRow = document.createElement("div");
-                newRow.classList.add("api-row");
-                newRow.innerHTML = `
-                <h3>${serviceName}</h3>
-                <h3>${apiKey}</h3>
-                <h3>${lastUsed || "사용 기록 없음"}</h3>
-                <h3>${user}</h3>
-                <h3>읽기/쓰기</h3>
-            `;
-                apiList.appendChild(newRow);
-            } else {
-                alert("서비스 등록 실패");
-            }
-        })
-        .catch(error => {
-            console.error("서비스 등록 오류:", error);
-            alert("서비스 등록 중 오류가 발생했습니다.");
-        });
+    // 새로운 행(row) 추가
+    const newRow = document.createElement('div');
+    newRow.classList.add('api_item'); // 새로운 클래스 추가
+
+    // 새 항목의 HTML 구성
+        newRow.innerHTML = `
+        <div>${serviceName}</div>
+        <div>${apiKey || '없음'}</div>
+        <div>${lastUsed}</div>
+        <div>${user}</div>
+        <div>허가 필요</div>
+    `;
+
+
+    // .api div 안에서 hr 태그 아래에 항목 삽입
+    apiContainer.appendChild(newRow);  // appendChild로 hr 아래에 추가
+
+    // 모달 닫기
+    closeModal();
 }
+
 
