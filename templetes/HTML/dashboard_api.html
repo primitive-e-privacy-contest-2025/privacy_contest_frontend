@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대시보드</title>
+    <link rel="stylesheet" href="../CSS/dashboard_api.css">
+</head>
+<body>
+<div class="container">
+    <nav class="sidebar">
+        <ul class="menu1">
+            <li><a href="../HTML/">대시보드</a></li>
+            <li><a href="../HTML/dashboard_busin_insight.html">계정 인사이트</a></li>
+            <li class="active"><a href="../HTML/dashboard_api.html">등록된 서비스 조회</a></li>
+            <li><a href="MyInfo_busin.html">내 정보</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1><a href="#.html" id="back">〈</a>&ensp;&ensp;등록된 서비스</h1>
+        <div class="box-container">
+            <div class="service-box">
+                <span onclick="openModal()">서비스 등록하기</span>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="api">
+            <div class="api_header">
+                <h3 id="user_name">이름</h3>
+                <h3 id="api_key">API 키</h3>
+                <h3 id="last">마지막 사용일</h3>
+                <h3 id="user_names">사용자</h3>
+                <h3 id="permissions">허가</h3>
+            </div>
+        </div>
+    </main>
+</div>
+</div>
+
+<div id="serviceModal" class="modal">
+    <div class="modal_content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>서비스 등록</h2>
+        <label for="name">서비스 이름:</label>
+        <input type="text" id="name" placeholder="서비스 이름"><br><br>
+
+        <label for="last_used">마지막 사용일:</label>
+        <input type="date" id="last_used"><br><br>
+
+        <label for="user">사용자:</label>
+        <input type="text" id="user" placeholder="사용자 이름"><br><br>
+
+        <button onclick="generateApiKey()">API 키 생성</button>
+        <br><br>
+        <p>생성된 API 키: <span id="generated_api_key"></span></p>
+        <button onclick="registerService()">등록하기</button>
+    </div>
+</div>
+
+<script src="../JS/api.js"></script>
+</body>
+</html>

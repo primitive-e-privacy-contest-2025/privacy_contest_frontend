@@ -1,0 +1,241 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 📌 컨테이너 전체 */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 📌 왼쪽 사이드바 */
+.sidebar {
+    width: 250px;
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 사이드바 메뉴 스타일 */
+.menu1 {
+    list-style: none;
+    width: 100%;
+}
+
+.menu1 li {
+    margin: 10px 0;
+}
+
+.menu1 li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu1 li a:hover,
+.menu1 li.active a {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+/* 📌 메인 컨텐츠 */
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* 📌 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu li a {
+        text-align: left;
+        padding: 10px 15px;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* 📌 박스 컨테이너 */
+.box-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; /* 상자를 오른쪽으로 정렬 */
+    gap: 20px; /* 상자 간격 추가 */
+    flex-wrap: wrap; /* 반응형 디자인을 위해 wrap 설정 */
+}
+
+/* 📌 서비스 박스 스타일 */
+.service-box {
+    width: 300px; /* 가로 길이 */
+    height: 60px; /* 세로 높이 */
+    background-color: #007acc; /* 배경 색상 */
+    border-radius: 25px; /* 타원형 둥근 모서리 */
+    display: flex; /* Flexbox로 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    color: white; /* 글자 색 */
+    font-size: 16px; /* 글자 크기 */
+    font-weight: bold; /* 글자 두께 */
+    cursor: pointer; /* 마우스 커서가 손 모양으로 */
+    transition: background-color 0.3s, transform 0.2s; /* 배경 색상 변화 및 애니메이션 */
+    padding: 10px;
+}
+
+.service-box:hover {
+    background-color: #005fa3; /* 호버 시 배경 색상 변경 */
+    transform: scale(1.05); /* 호버 시 살짝 확대 */
+}
+
+/* 📌 서비스 박스 텍스트 */
+.service-box span {
+    font-size: 18px;
+    font-weight: 600;
+}
+#back {
+    text-decoration: none;
+    color: black; /* 링크 색상 변경 */
+}
+
+#back:hover {
+    color: black;
+}
+
+#back:visited {
+    color: black;
+}
+
+#back:active {
+    color: black;
+}
+
+.api_header{
+    display: flex;
+}
+
+.api_header h3 {
+    display: flex;
+    margin: 0;
+}
+
+#user_name {
+    margin-right: 180px;
+}
+
+#api_key {
+    margin-right: 150px;
+}
+
+#last {
+    margin-right: 100px;
+}
+
+#user_names{
+    margin-right: 160px;
+}
+
+#permissions {
+    margin-right: 5px;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.modal_content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal_content button {
+    background-color: #93ccff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal_content button:hover {
+    background-color: #93ccff;
+    transform: scale(1.05);
+}
+
+.modal_content button:active {
+    background-color: #93ccff;
+    transform: scale(0.98);
+}
+
+.api_item {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.api_item div {
+    width: 25%;
+}
+
+
+

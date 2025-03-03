@@ -1,0 +1,157 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 전체 레이아웃 */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 사이드바 */
+.sidebar {
+    width: 250px;
+    background-color: #444;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.sidebar ul li a.active {
+    width: 100%;
+    background-color: #656565;
+    border-radius: 3px;
+}
+
+/* 메인 컨텐츠 */
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+/* 헤더 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 조회수 */
+.stats {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.badge {
+    font-size: 12px;
+    color: white;
+    background: #858585;
+    padding: 5px;
+    border-radius: 17px;
+}
+
+.total {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 바 차트 */
+.bar-chart {
+    margin-top: 10px;
+}
+
+.bar {
+    height: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.red { background: #fdabab; color: black; width: 70%; }
+.blue { background: #9696ff; color: black; width: 45%; }
+.yellow { background: #ffff8c; color: black; width: 80%; }
+.green { background: #b8fbb8; color: black; width: 85%; }
+
+/* 테이블 */
+.data-table {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #f0f0f0;
+}
+
+/* 차트 */
+.chart {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+}
+
+#back {
+    text-decoration: none;
+    color: black; /* 링크 색상 변경 */
+}
+
+#back:hover {
+    color: black;
+}
+
+#back:visited {
+    color: black;
+}
+
+#back:active {
+    color: black;
+}
