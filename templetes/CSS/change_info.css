@@ -3,13 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif; /* 변경 */
 }
 
 /* 컨테이너 전체 */
 .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh; /* 변경: 전체 높이를 꽉 채우는 대신 최소 높이 설정 */
+    flex-direction: column; /* 화면 크기 조정 시 기본 방향을 column으로 설정 */
 }
 
 /* 메인 컨텐츠 */
@@ -24,15 +25,7 @@
     color: black; /* 링크 색상 변경 */
 }
 
-#back:hover {
-    color: black;
-}
-
-#back:visited {
-    color: black;
-}
-
-#back:active {
+#back:hover, #back:visited, #back:active {
     color: black;
 }
 
@@ -69,6 +62,10 @@ h1 {
     .container {
         flex-direction: column;
     }
+
+    .btn {
+        width: 100%; /* 버튼이 화면에 맞춰 100%로 확장 */
+    }
 }
 
 .btn {
@@ -80,14 +77,15 @@ h1 {
     color: #333333;
     border: solid 1px #ddd;
     border-radius: 5px;
-    width: 250px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
 }
+
 .btn-container {
     margin-top: 10px;
 }
+
 .btn:hover {
     background-color: #b4b2b2;
 }
