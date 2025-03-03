@@ -47,23 +47,19 @@ function displayApiKey(data) {
     apiList.appendChild(newRow);
 }
 
-// 모달 열기
 function openModal() {
     document.getElementById("serviceModal").style.display = "block";
 }
 
-// 모달 닫기
 function closeModal() {
     document.getElementById("serviceModal").style.display = "none";
 }
 
-// 무작위 API 키 생성
 function generateApiKey() {
     const randomApiKey = generateRandomString(16); // 16자리 무작위 API 키 생성
     document.getElementById("generated_api_key").textContent = randomApiKey;
 }
 
-// 무작위 문자열 생성 함수
 function generateRandomString(length) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
@@ -75,20 +71,16 @@ function generateRandomString(length) {
 }
 
 function registerService() {
-    // 입력된 값 가져오기
     const serviceName = document.getElementById('name').value;
     const lastUsed = document.getElementById('last_used').value;
     const user = document.getElementById('user').value;
-    const apiKey = document.getElementById('generated_api_key').textContent; // 생성된 API 키
+    const apiKey = document.getElementById('generated_api_key').textContent;
 
-    // .api div 안에 있는 api_header 바로 아래에 새로운 항목 추가
     const apiContainer = document.querySelector('.api');
 
-    // 새로운 행(row) 추가
     const newRow = document.createElement('div');
-    newRow.classList.add('api_item'); // 새로운 클래스 추가
+    newRow.classList.add('api_item');
 
-    // 새 항목의 HTML 구성
         newRow.innerHTML = `
         <div>${serviceName}</div>
         <div>${apiKey || '없음'}</div>
@@ -97,11 +89,8 @@ function registerService() {
         <div>허가 필요</div>
     `;
 
+    apiContainer.appendChild(newRow);
 
-    // .api div 안에서 hr 태그 아래에 항목 삽입
-    apiContainer.appendChild(newRow);  // appendChild로 hr 아래에 추가
-
-    // 모달 닫기
     closeModal();
 }
 

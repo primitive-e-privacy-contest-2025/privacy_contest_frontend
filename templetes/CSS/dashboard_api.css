@@ -225,8 +225,8 @@ h1 {
 }
 
 .api_item {
-    display: flex;  /* flex 레이아웃을 사용하여 가로로 정렬 */
-    flex-direction: row; /* 기본값이 row지만, 명시적으로 설정해줍니다. */
+    display: flex;
+    flex-direction: row;
     margin: 5px 0;
     padding: 5px;
     background-color: #f9f9f9;
@@ -234,7 +234,7 @@ h1 {
 }
 
 .api_item div {
-    width: 25%; /* 각 항목이 동일한 너비를 가지도록 설정 */
+    width: 25%;
 }
 
 
