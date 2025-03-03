@@ -6,110 +6,39 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* 📌 컨테이너 전체 */
+/* 컨테이너 전체 */
 .container {
     display: flex;
     height: 100vh;
 }
 
-/* 📌 왼쪽 사이드바 */
-.sidebar {
-    width: 250px;
-    background-color: #444;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 프로필 영역 */
-.profile {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.profile-img {
-    width: 60px;
-    height: 60px;
-    background-color: gray;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.username {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* 메뉴 스타일 */
-.menu {
-    list-style: none;
-    width: 100%;
-}
-
-.menu li {
-    margin: 10px 0;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    display: block;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.menu li a:hover,
-.menu li.active a {
-    background-color: #666;
-}
-
-/* 📌 메인 컨텐츠 */
+/* 메인 컨텐츠 */
 .content {
     flex: 1;
     padding: 40px;
     background-color: #f8f8f8;
 }
 
+#back {
+    text-decoration: none;
+    color: black; /* 링크 색상 변경 */
+}
+
+#back:hover {
+    color: black;
+}
+
+#back:visited {
+    color: black;
+}
+
+#back:active {
+    color: black;
+}
+
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
-}
-
-/* 프로필 정보 */
-.profile-info {
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.profile-img.large {
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
-}
-
-.user-details p {
-    font-size: 16px;
-}
-
-.edit-btn {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #eeeeee;
-    color: #818181;
-    border-radius: 5px;
-    border: 0.3px solid #818181;
-    cursor: pointer;
-}
-
-.edit-btn:hover {
-    border-color: #a8a8a8;
 }
 
 /* 설정 목록 */
@@ -128,37 +57,37 @@ h1 {
     border-bottom: none;
 }
 
-.setting-item a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-}
-
 .setting-item p {
     font-size: 14px;
-    color: gray;
+    color: #333333;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-/* 📌 반응형 디자인 */
+/* 반응형 디자인 */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
+}
 
-    .sidebar {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .menu li a {
-        text-align: left;
-        padding: 10px 15px;
-    }
-
-    .profile-info {
-        flex-direction: column;
-        text-align: center;
-    }
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    margin-right: 7px;
+    font-size: 14px;
+    color: #333333;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    width: 250px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-container {
+    margin-top: 10px;
+}
+.btn:hover {
+    background-color: #b4b2b2;
 }
