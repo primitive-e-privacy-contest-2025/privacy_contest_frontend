@@ -1,33 +1,36 @@
-const backend_url = "https://primitive-backend.run.goorm.site/";
+const backend_url = "https://primitive-backend.run.goorm.site";
 
-// 회원가입 함수
+function getValueById(id) {
+    const element = document.getElementById(id);
+    return element ? element.value : "";
+}
+
 async function handleSignin() {
-    const signupData = new FormData();
-
-    // 파일이 선택되었을 때만 추가
-    const fileInput = document.querySelector("#file-input");
-    if (fileInput.files.length > 0) {
-        signupData.append("file_input", fileInput.files[0]);
-    }
-
-    signupData.append("business_reg_number", document.getElementById("business_reg_number").value);
-    signupData.append("business_phone", document.getElementById("phone_number").value);
-    signupData.append("email", document.getElementById("email").value);
-    signupData.append("password", document.getElementById("password").value);
-    signupData.append("name", document.getElementById("name").value);
+    const signupData = {
+        phoneNumber: getValueById("phoneNumber"),
+        loginId: getValueById("loginId"),
+        email: getValueById("email"),
+        loginPw: getValueById("loginPw"),
+        fullName: getValueById("fullName"),
+        dateOfBirth: getValueById("dateOfBirth"),
+    };
 
     try {
-        const response = await fetch(`${backend_url}/user_signup`, {
+        const response = await fetch(`${backend_url}/user/register`, {
             method: "POST",
-            body: signupData, // FormData는 Content-Type 자동 설정됨
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(signupData),
         });
 
         const responseData = await response.json();
 
-        if (response.status === 200) {
-            window.location.replace(`${backend_url}/user_login.html`);
+        if (response.ok) {
+            window.location.replace("user_login.html");
         } else {
-            alert(`Error: ${responseData.message || response.status}`);
+            const errorMessage = responseData.message || response.status;
+            alert(`회원가입 오류: ${errorMessage}`);
         }
     } catch (error) {
         console.error("회원가입 오류:", error);
@@ -36,40 +39,43 @@ async function handleSignin() {
 }
 
 async function handleLogin() {
-    console.log("handle login");
-
     const loginData = {
-        id: document.getElementById("id").value,
-        password: document.getElementById("password").value,
+        loginId: getValueById("loginId"),
+        loginPw: getValueById("loginPw"),
     };
 
     try {
-        const response = await fetch(`${backend_url}/user_login`, {
+        const response = await fetch(`${backend_url}/user/login`, {
             headers: {
                 Accept: "application/json",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             method: "POST",
-            body: JSON.stringify(loginData)
+            body: JSON.stringify(loginData),
         });
+
+        if (!response.ok) {  // 응답 상태가 2xx가 아니면 처리
+            const errorText = await response.text(); // 응답 텍스트를 먼저 확인
+            console.error("로그인 오류:", errorText);
+            alert(`로그인 실패: ${errorText}`);
+            return;
+        }
 
         const response_json = await response.json();
         console.log(response_json.access);
 
-        if (response.status === 200) {
-            localStorage.setItem("access", response_json.access);
-            localStorage.setItem("refresh", response_json.refresh);
+        localStorage.setItem("access", response_json.access);
+        localStorage.setItem("refresh", response_json.refresh);
 
-            const base64Url = response_json.access.split('.')[1];
-            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-            const jsonPayload = JSON.parse(atob(base64));
+        const base64Url = response_json.access.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = JSON.parse(atob(base64));
 
-            localStorage.setItem("payload", JSON.stringify(jsonPayload));
-        } else {
-            alert(`로그인 실패: ${response_json.message || response.status}`);
-        }
+        localStorage.setItem("payload", JSON.stringify(jsonPayload));
+
+        window.location.replace("User/dashboard_user_insight.html");
     } catch (error) {
-        console.error("로그인 오류:", error);
+        console.error("로그인 오류:", error);  // 오류를 더 명확하게 출력
         alert("로그인 중 오류가 발생했습니다.");
     }
 }

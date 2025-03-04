@@ -1,20 +1,20 @@
 <head>
-    <link href="../CSS/busin_login.css" rel="stylesheet">
+    <link href="../../CSS/busin_login.css" rel="stylesheet">
     <meta charset="UTF-8">
 </head>
 <body id="particles-js">
 <div class="animated bounceInDown">
     <div class="header">
-    <a href="index.html"><img src="../image/logo_no-circle.png" id="logo"></a>
-    <a href="menu.html"><img src="../image/menu.png" alt="Menu_icon" id="menu_icon"></a>
-    <a href="user_login.html" class="sign-join" id="LOGIN">로그인</a>
+    <a href="../index.html"><img src="../../image/logo_no-circle.png" id="logo"></a>
+    <a href="menu.html"><img src="../../image/menu.png" alt="Menu_icon" id="menu_icon"></a>
+    <a href="../User/user_login.html" class="sign-join" id="LOGIN">로그인</a>
     <a href="busin_signup.html" class="sign-join" id="JOIN">회원가입</a>
     </div>
 
   <div class="container">
     <span class="error animated tada" id="msg"></span>
     <form name="form1" class="box" onsubmit="businLogin(); return false;">
-    <a href="user_login.html" class="btn2 indiv-mem">개인 회원 로그인</a>
+    <a href="../User/user_login.html" class="btn2 indiv-mem">개인 회원 로그인</a>
     <a href="busin_login.html" class="btn2 busin-mem">기업 회원 로그인</a>
 
       <h4>기업 회원 로그인</h4>
@@ -28,10 +28,10 @@
           <span></span>
           <small class="rmb">Remember me</small>
         </label>
-        <input type="submit" value="Sign in" class="btn1" id="signIn" onclick="handleLogin();">
+        <input type="submit" value="Sign in" class="btn1" id="signIn" onclick="handleLogin2();">
     </form>
     <a href="#" class="dnthave">Don’t have an account? Sign up</a>
   </div>
 </div>
-<script src="../JS/busin_api.js"></script>
+<script src="../../JS/busin_api.js"></script>
 </body>

@@ -8,7 +8,7 @@
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 140vh;
 }
 
 /* 사이드바 스타일 */
@@ -96,6 +96,7 @@ th {
 .data-management {
     background: white;
     padding: 20px;
+    margin-top: 20px;
     border-radius: 10px;
 }
 

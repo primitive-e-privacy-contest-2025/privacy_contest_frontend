@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="../CSS/busin_signup.css" rel="stylesheet">
+    <link href="../../CSS/busin_signup.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Title</title>
 </head>
@@ -10,16 +10,16 @@
 
 <div class="animated bounceInDown">
     <div class="header">
-        <a href="index.html"><img src="../image/logo_no-circle.png" id="logo"></a>
-        <a href="menu.html"><img src="../image/menu.png" alt="Menu_icon" id="menu_icon"></a>
-        <a href="user_login.html" class="sign-join" id="LOGIN">로그인</a>
+        <a href="../index.html"><img src="../../image/logo_no-circle.png" id="logo"></a>
+        <a href="menu.html"><img src="../../image/menu.png" alt="Menu_icon" id="menu_icon"></a>
+        <a href="../User/user_login.html" class="sign-join" id="LOGIN">로그인</a>
         <a href="busin_signup.html" class="sign-join" id="JOIN">회원가입</a>
     </div>
 
     <div class="container">
         <span class="error animated tada" id="msg"></span>
         <form name="form1" class="box" onsubmit="return checkStuff()">
-            <a href="user_signup.html" class="btn2 indiv-mem">일반 회원가입</a>
+            <a href="../User/user_signup.html" class="btn2 indiv-mem">일반 회원가입</a>
             <a href="busin_signup.html" class="btn2 busin-mem">기업 회원가입</a>
 
             <br><br><br>
@@ -76,14 +76,14 @@
             <input style="width: 450px" type="text" name="name" id="name" autocomplete="off">
 
             <div class="sign-button">
-                <a class="signup" id="signup" onclick="handleSignin()">회원가입</a>
+                <a class="signup" id="signup" onclick="handleSignin2()">회원가입</a>
             </div>
 
         </form>
     </div>
 </div>
-<script src="../JS/password.js"></script>
-<script src="../JS/drop-area.js"></script>
-<script src="../JS/busin_api.js"></script>
+<script src="../../JS/password.js"></script>
+<script src="../../JS/drop-area.js"></script>
+<script src="../../JS/busin_api.js"></script>
 </body>
 </html>

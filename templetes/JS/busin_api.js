@@ -1,19 +1,26 @@
-const backend_url = "https://primitive-backend.run.goorm.site/";
+const backend_url = "https://primitive-backend.run.goorm.site";
 
-async function handleSignin() {
+async function handleSignin2() {
     const gender = document.querySelector(".gender.selected")?.id || "";
 
     const signupData = new FormData();
 
     signupData.append("file_input", document.querySelector("#file-input").files[0]);
-    signupData.append("business_reg_number", document.getElementById("business_reg_number").value);
-    signupData.append("business_phone", document.getElementById("phone_number").value);
+    signupData.append("contactPhone", document.getElementById("business_reg_number").value);
+    signupData.append("managerPhone", document.getElementById("phone_number").value);
     signupData.append("email", document.getElementById("email").value);
-    signupData.append("password", document.getElementById("password").value);
-    signupData.append("name", document.getElementById("name").value);
+    signupData.append("loginPw", document.getElementById("password").value);
+    signupData.append("managerName", document.getElementById("name").value);
+
+    const fileInput = document.querySelector("#file-input");
+    if (fileInput && fileInput.files.length > 0) {
+        signupData.append("file_input", fileInput.files[0]);
+    } else {
+        console.error("파일 입력 요소가 없거나 파일이 선택되지 않았습니다.");
+    }
 
     try {
-        const response = await fetch(`${backend_url}/user_signup`, {
+        const response = await fetch(`${backend_url}/corporate/login`, {
             method: "POST",
             body: signupData,
         });
@@ -21,7 +28,7 @@ async function handleSignin() {
         const responseData = await response.json();
 
         if (response.status === 200) {
-            window.location.replace(`${backend_url}/user_login.html`);
+            window.location.replace(`${backend_url}/corporate/login`);
         } else {
             alert(`Error: ${responseData.message || response.status}`);
         }
@@ -30,7 +37,7 @@ async function handleSignin() {
         alert("회원가입 중 오류가 발생했습니다.");
     }
 }
-async function handleLogin() {
+async function handleLogin2() {
     console.log("handle login");
 
     const loginData = {
@@ -39,7 +46,7 @@ async function handleLogin() {
     };
 
     try {
-        const response = await fetch(`${backend_url}/busin_login`, {
+        const response = await fetch(`${backend_url}/corporate/login`, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json"
