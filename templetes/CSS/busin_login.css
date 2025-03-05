@@ -203,6 +203,9 @@ label span {
     top: 340px;
     left: 100px;
     width: 360px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
 }
 
 /* 공통 버튼 스타일 */

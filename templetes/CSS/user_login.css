@@ -167,7 +167,11 @@ label span {
     background: #7499F7;
     color: #eaeaea;
     top: 340px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
 }
+
 
 #forgetId{
     background: #ffffff;

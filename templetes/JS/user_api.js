@@ -54,28 +54,29 @@ async function handleLogin() {
             body: JSON.stringify(loginData),
         });
 
-        if (!response.ok) {  // 응답 상태가 2xx가 아니면 처리
-            const errorText = await response.text(); // 응답 텍스트를 먼저 확인
+        if (!response.ok) {
+            const errorText = await response.text();
             console.error("로그인 오류:", errorText);
             alert(`로그인 실패: ${errorText}`);
             return;
         }
 
         const response_json = await response.json();
-        console.log(response_json.access);
+        console.log("Response JSON:", response_json);
+
+        if (!response_json.access) {
+            alert("서버에서 올바른 토큰을 받지 못했습니다.");
+            return;
+        }
 
         localStorage.setItem("access", response_json.access);
         localStorage.setItem("refresh", response_json.refresh);
 
-        const base64Url = response_json.access.split('.')[1];
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        const jsonPayload = JSON.parse(atob(base64));
+        console.log("Access Token:", localStorage.getItem("access"));
 
-        localStorage.setItem("payload", JSON.stringify(jsonPayload));
-
-        window.location.replace("User/dashboard_user_insight.html");
+        window.location.replace("dashboard_user_insight.html");
     } catch (error) {
-        console.error("로그인 오류:", error);  // 오류를 더 명확하게 출력
+        console.error("로그인 오류:", error);
         alert("로그인 중 오류가 발생했습니다.");
     }
 }
